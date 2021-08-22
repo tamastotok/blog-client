@@ -48,7 +48,7 @@ function Contact() {
 
     try {
       const response = await axios.post(`${PROXY}/submit`, data);
-      console.log(response);
+      console.log(response.data);
       alert(response.data);
     } catch (error) {
       console.log(error);
