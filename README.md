@@ -4,6 +4,7 @@
 
 ### Links:
 
+- Deployment: [link](https://photographer-blog-client.herokuapp.com)
 - Project design: [list of guides](https://github.com/tamastotok/react-design-guides).
 - Frontend: [create-react-app](https://github.com/facebook/create-react-app).
 - CMS: [Sanity](https://www.sanity.io).
