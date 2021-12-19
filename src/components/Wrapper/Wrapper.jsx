@@ -1,7 +1,7 @@
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
-function Wrapper({ children }) {
+export default function Wrapper({ children }) {
   return (
     <>
       <Header />
@@ -10,5 +10,3 @@ function Wrapper({ children }) {
     </>
   );
 }
-
-export default Wrapper;

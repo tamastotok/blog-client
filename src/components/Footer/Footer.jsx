@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { album } from "../../utils/constants/images";
-import * as S from "./Footer.styles";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { album } from '../../utils/constants/images';
+import * as S from './Footer.styles';
 
-function Footer() {
+export default function Footer() {
   return (
     <section>
       <S.Container>
@@ -35,5 +35,3 @@ function Footer() {
     </section>
   );
 }
-
-export default Footer;

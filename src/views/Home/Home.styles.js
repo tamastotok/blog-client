@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors, size } from '../../styles/global';
 
-export const HeroContainer = styled.section`
+export const Welcome_Section = styled.section`
   position: relative;
   min-height: 800px;
   & img:nth-child(1) {
@@ -35,7 +35,7 @@ export const HeroContainer = styled.section`
   }
 `;
 
-export const HeroText = styled.div`
+export const Welcome_Text_Content = styled.div`
   margin-top: 40px;
   margin-bottom: 40px;
   margin-left: auto;
@@ -53,7 +53,7 @@ export const HeroText = styled.div`
   }
 `;
 
-export const Main = styled.main`
+export const Main_Wrapper = styled.main`
   padding-top: 40px;
   padding-bottom: 80px;
   @media screen and (min-width: ${size.lg}) {
@@ -61,7 +61,7 @@ export const Main = styled.main`
   }
 `;
 
-export const AboutContainer = styled.section`
+export const About_Section = styled.section`
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: auto;
@@ -87,7 +87,7 @@ export const AboutContainer = styled.section`
   }
 `;
 
-export const AboutText = styled.div`
+export const About_Text = styled.div`
   margin-top: 40px;
   margin-bottom: 40px;
   margin-left: auto;
@@ -103,7 +103,7 @@ export const AboutText = styled.div`
   }
 `;
 
-export const PhotosContainer = styled.section`
+export const Photos_Section = styled.section`
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: auto;
@@ -151,7 +151,7 @@ export const PhotosContainer = styled.section`
   }
 `;
 
-export const PhotosText = styled.div`
+export const Photos_Text = styled.div`
   margin-top: 40px;
   margin-bottom: 40px;
   margin-left: auto;
@@ -168,7 +168,7 @@ export const PhotosText = styled.div`
   }
 `;
 
-export const BlogContainer = styled.section`
+export const Blog_Section = styled.section`
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 10px;
@@ -176,7 +176,7 @@ export const BlogContainer = styled.section`
   background-color: ${colors.gray_95};
 `;
 
-export const BlogHeader = styled.div`
+export const Blog_Header = styled.div`
   margin-top: 0;
   margin-bottom: 40px;
   margin-left: auto;
@@ -194,7 +194,7 @@ export const BlogHeader = styled.div`
   }
 `;
 
-export const Wrapper = styled.div`
+export const Blog_Wrapper = styled.div`
   @media screen and (min-width: ${size.lg}) {
     display: flex;
     justify-content: center;
@@ -205,7 +205,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const BlogContent = styled.div`
+export const Blog_Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,10 +1,10 @@
-import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
-import { album } from "../../utils/constants/images";
-import scrollTo from "../../utils/helpers/scrollIntoView";
-import * as S from "./Photos.styles";
+import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { album } from '../../utils/constants/images';
+import scrollTo from '../../utils/helpers/scrollIntoView';
+import * as S from './Photos.styles';
 
-function Photos() {
+export default function Photos() {
   const time = 0.5;
   const [isLoaded, setIsLoaded] = useState(false);
   const [size, setSize] = useState(0);
@@ -29,7 +29,7 @@ function Photos() {
 
   const imageSlideTransition = (transform) => {
     carouselSlideRef.current.style.transition = !transform
-      ? "none"
+      ? 'none'
       : `transform ${time}s ease-in-out`;
     carouselSlideRef.current.style.transform = `translateX(-${
       size * counter
@@ -152,8 +152,8 @@ function Photos() {
           <S.GalleryButtons>
             <button onClick={prevButtonClick} ref={prevButtonRef}>
               prev
-            </button>{" "}
-            /{" "}
+            </button>{' '}
+            /{' '}
             <button onClick={nextButtonClick} ref={nextButtonRef}>
               next
             </button>
@@ -165,5 +165,3 @@ function Photos() {
     </>
   );
 }
-
-export default Photos;

@@ -12,7 +12,7 @@ function NavLink({ direction, text }) {
   );
 }
 
-function Navbar() {
+export default function Navbar() {
   const [isClicked, setIsClicked] = useState(false);
   const burgerMenuRef = useRef(!null);
   const navLinksRef = useRef(!null);
@@ -59,5 +59,3 @@ function Navbar() {
     </>
   );
 }
-
-export default Navbar;

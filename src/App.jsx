@@ -1,18 +1,18 @@
-import { useState, useEffect, lazy, Suspense } from "react";
-import { Switch, BrowserRouter } from "react-router-dom";
-import sanityClient from "./client.js";
-import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import CustomRoute from "./components/CustomRoute/CustomRoute";
+import { useState, useEffect, lazy, Suspense } from 'react';
+import { Switch, BrowserRouter } from 'react-router-dom';
+import sanityClient from './client.js';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import CustomRoute from './components/CustomRoute/CustomRoute';
 
-const Home = lazy(() => import("./views/Home/Home"));
-const About = lazy(() => import("./views/About/About"));
-const Photos = lazy(() => import("./views/Photos/Photos"));
-const Blog = lazy(() => import("./views/Blog/Blog"));
-const SinglePost = lazy(() => import("./views/SinglePost/SinglePost"));
-const Contact = lazy(() => import("./views/Contact/Contact"));
-const PageNotFound = lazy(() => import("./views/PageNotFound/PageNotFound"));
+const Home = lazy(() => import('./views/Home/Home'));
+const About = lazy(() => import('./views/About/About'));
+const Photos = lazy(() => import('./views/Photos/Photos'));
+const Blog = lazy(() => import('./views/Blog/Blog'));
+const SinglePost = lazy(() => import('./views/SinglePost/SinglePost'));
+const Contact = lazy(() => import('./views/Contact/Contact'));
+const PageNotFound = lazy(() => import('./views/PageNotFound/PageNotFound'));
 
-function App() {
+export default function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -53,5 +53,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;

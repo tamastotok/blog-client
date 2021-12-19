@@ -1,16 +1,16 @@
-import { useRef, useEffect, useState } from "react";
-import { useLocation } from "react-router";
-import axios from "axios";
-import { album } from "../../utils/constants/images";
-import * as S from "./Contact.styles";
+import { useRef, useEffect, useState } from 'react';
+import { useLocation } from 'react-router';
+import axios from 'axios';
+import { album } from '../../utils/constants/images';
+import * as S from './Contact.styles';
 
-function Contact() {
+export default function Contact() {
   const location = useLocation();
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const subjectRef = useRef(null);
   const messageRef = useRef(null);
-  const [serverStatus, setServerStatus] = useState("");
+  const [serverStatus, setServerStatus] = useState('');
   const [serverIsOffline, setServerIsOffline] = useState(false);
 
   const PROXY = process.env.REACT_APP_PROXY;
@@ -19,18 +19,18 @@ function Contact() {
   useEffect(() => {
     const connectToSubmit = async () => {
       try {
-        const response = await axios.get(`${PROXY}/status`);
-        console.log(response.status);
-        setServerStatus("");
-        setServerIsOffline(false);
+        const { data } = await axios.get(`${PROXY}/status`);
+        if (data) {
+          setServerStatus('');
+          setServerIsOffline(false);
+        }
       } catch (error) {
-        console.log(error);
-        setServerStatus("Contact is unavailable!");
+        setServerStatus('Contact is unavailable!');
         setServerIsOffline(true);
       }
     };
 
-    if (location.pathname === "/contact") {
+    if (location.pathname === '/contact') {
       connectToSubmit();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -48,13 +48,9 @@ function Contact() {
 
     try {
       const response = await axios.post(`${PROXY}/submit`, data);
-      console.log(response.data);
       alert(response.data);
     } catch (error) {
-      console.log(error);
       alert(error.message);
-      setServerStatus("Contact is unavailable!");
-      setServerIsOffline(true);
     }
   };
 
@@ -63,7 +59,7 @@ function Contact() {
       <img src={album.pen.src} alt={album.pen.alt} />
       <S.Text>
         {serverIsOffline ? (
-          <h2 style={{ color: "crimson" }}>{serverStatus}</h2>
+          <h2 style={{ color: 'crimson' }}>{serverStatus}</h2>
         ) : (
           <h2>Contact</h2>
         )}
@@ -130,5 +126,3 @@ function Contact() {
     </S.Contact>
   );
 }
-
-export default Contact;

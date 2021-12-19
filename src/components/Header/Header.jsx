@@ -1,8 +1,8 @@
-import React from "react";
-import Navbar from "../Navbar/Navbar";
-import * as S from "./Header.styles";
+import React from 'react';
+import Navbar from '../Navbar/Navbar';
+import * as S from './Header.styles';
 
-function Header() {
+export default function Header() {
   return (
     <>
       <Navbar />
@@ -10,5 +10,3 @@ function Header() {
     </>
   );
 }
-
-export default Header;

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import * as S from './PageNotFound.styles';
 
-function PageNotFound() {
+export default function PageNotFound() {
   return (
     <S.Message>
       <h1>Page not found!</h1>
@@ -9,5 +9,3 @@ function PageNotFound() {
     </S.Message>
   );
 }
-
-export default PageNotFound;

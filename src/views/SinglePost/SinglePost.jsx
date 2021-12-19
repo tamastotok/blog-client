@@ -1,20 +1,10 @@
-import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
-import sanityClient from "../../client.js";
-import BlockContent from "@sanity/block-content-to-react";
-import * as S from "./SinglePost.styles";
+import { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import sanityClient from '../../client.js';
+import BlockContent from '@sanity/block-content-to-react';
+import * as S from './SinglePost.styles';
 
-// fetching images
-/*
-import imageUrlBuilder from "@sanity/image-url";
-
-const builder = imageUrlBuilder(sanityClient);
-function urlFor(source) {
-   return builder.image(source);
-}
-*/
-
-function SinglePost() {
+export default function SinglePost() {
   const [post, setPost] = useState(null);
   const { slug } = useParams();
 
@@ -64,5 +54,3 @@ function SinglePost() {
     </S.Post>
   );
 }
-
-export default SinglePost;

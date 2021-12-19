@@ -1,9 +1,9 @@
-import { lazy } from "react";
-import { Route } from "react-router-dom";
+import { lazy } from 'react';
+import { Route } from 'react-router-dom';
 
-const Wrapper = lazy(() => import("../Wrapper/Wrapper"));
+const Wrapper = lazy(() => import('../Wrapper/Wrapper'));
 
-function CustomRoute({
+export default function CustomRoute({
   path,
   wrap = true,
   exact = false,
@@ -26,5 +26,3 @@ function CustomRoute({
     </Route>
   );
 }
-
-export default CustomRoute;

@@ -1,10 +1,10 @@
-import { useRef } from "react";
-import { Link } from "react-router-dom";
-import { album } from "../../utils/constants/images";
-import scrollTo from "../../utils/helpers/scrollIntoView";
-import * as S from "./About.styles";
+import { useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { album } from '../../utils/constants/images';
+import scrollTo from '../../utils/helpers/scrollIntoView';
+import * as S from './About.styles';
 
-function About() {
+export default function About() {
   const quoteRef = useRef(!null);
 
   return (
@@ -80,5 +80,3 @@ function About() {
     </>
   );
 }
-
-export default About;

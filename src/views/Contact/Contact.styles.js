@@ -78,6 +78,7 @@ export const Form = styled.form`
     resize: none;
     border: 2px solid ${colors.gray_80};
     border-radius: 5px;
+    font-size: 1rem;
   }
   & textarea:focus {
     border: 2px solid ${colors.black};
