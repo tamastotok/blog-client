@@ -52,7 +52,8 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
+    overflow-x: hidden;
+  }
 
   html {
     scroll-behavior: auto;
@@ -65,7 +66,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    width:fit-content;
+    width: fit-content;
     height: fit-content;
     font-size: 12rem;
     font-family: 'Silhouetto';
@@ -75,7 +76,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h2 {
     margin-bottom: 20px;
-    width:fit-content;
+    width: fit-content;
     height: fit-content;
     font-family: 'Montserrat';
     text-transform: uppercase;
@@ -84,7 +85,7 @@ export const GlobalStyle = createGlobalStyle`
 
   p {
     margin-bottom: 10px;
-    width:fit-content;
+    width: fit-content;
     height: fit-content;
     font-size: 1.2rem;
     line-height: 1.6;
@@ -95,7 +96,7 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     position: relative;
-    width:fit-content;
+    width: fit-content;
     height: fit-content;
     cursor: pointer;
     font-size: 0.8rem;
@@ -108,18 +109,16 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a::after {
-    content:'';
-    position:absolute;
-    bottom:-10px;
-    left:0;
-    width:100%;
-    height:1px;
-    background-color:${colors.gray_50}
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: ${colors.gray_50}
   }
-
 
   a:hover {
-    color:${colors.black};
+    color: ${colors.black};
   }
-
 `;

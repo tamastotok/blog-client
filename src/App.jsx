@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy, Suspense } from 'react';
+import { useState, useEffect, lazy } from 'react';
 import { Switch, BrowserRouter } from 'react-router-dom';
 import sanityClient from './client.js';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
@@ -39,17 +39,15 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Suspense fallback={<p>Loading...</p>}>
-        <Switch>
-          <CustomRoute path="/" exact={true} component={Home} />
-          <CustomRoute path="/about" component={About} />
-          <CustomRoute path="/photos" component={Photos} />
-          <CustomRoute path="/blog/:slug" wrap={false} component={SinglePost} />
-          <CustomRoute path="/blog" wProps={<Blog data={data} />} />
-          <CustomRoute path="/contact" component={Contact} />
-          <CustomRoute path="*" wrap={false} component={PageNotFound} />
-        </Switch>
-      </Suspense>
+      <Switch>
+        <CustomRoute path="/" exact={true} component={Home} />
+        <CustomRoute path="/about" component={About} />
+        <CustomRoute path="/photos" component={Photos} />
+        <CustomRoute path="/blog/:slug" wrap={false} component={SinglePost} />
+        <CustomRoute path="/blog" wProps={<Blog data={data} />} />
+        <CustomRoute path="/contact" component={Contact} />
+        <CustomRoute path="*" wrap={false} component={PageNotFound} />
+      </Switch>
     </BrowserRouter>
   );
 }
