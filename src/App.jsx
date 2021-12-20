@@ -1,16 +1,16 @@
-import { useState, useEffect, lazy } from 'react';
+import { useState, useEffect } from 'react';
 import { Switch, BrowserRouter } from 'react-router-dom';
 import sanityClient from './client.js';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import CustomRoute from './components/CustomRoute/CustomRoute';
 
-const Home = lazy(() => import('./views/Home/Home'));
-const About = lazy(() => import('./views/About/About'));
-const Photos = lazy(() => import('./views/Photos/Photos'));
-const Blog = lazy(() => import('./views/Blog/Blog'));
-const SinglePost = lazy(() => import('./views/SinglePost/SinglePost'));
-const Contact = lazy(() => import('./views/Contact/Contact'));
-const PageNotFound = lazy(() => import('./views/PageNotFound/PageNotFound'));
+import Home from './views/Home/Home';
+import About from './views/About/About';
+import Photos from './views/Photos/Photos';
+import Blog from './views/Blog/Blog';
+import SinglePost from './views/SinglePost/SinglePost';
+import Contact from './views/Contact/Contact';
+import PageNotFound from './views/PageNotFound/PageNotFound';
 
 export default function App() {
   const [data, setData] = useState(null);
