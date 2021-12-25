@@ -61,7 +61,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     overflow-x: hidden;
     font-size: 16px;
-    
   }
 
   h1 {
