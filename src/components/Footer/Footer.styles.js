@@ -2,57 +2,65 @@ import styled from 'styled-components';
 import { colors, size } from '../../styles/global';
 
 export const Footer = styled.div`
+  min-height: 480px;
   position: relative;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  @media only screen and (max-width: ${size.xxl}) {
+    padding-bottom: 2.5rem;
+  }
 `;
 
 export const TextContent = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   margin-left: auto;
   margin-right: auto;
-  max-width: 400px;
-  padding-left: 10px;
-  padding-right: 10px;
+  min-width: 320px;
+  max-width: 720px;
+  width: 100%;
+  padding-left: 5rem;
+  padding-right: 5rem;
   & h1 {
-    top: 0;
-    margin-bottom: -80px;
+    margin-bottom: -5rem;
     color: ${colors.gray_50};
   }
-  @media only screen and (min-width: ${size.lg}) {
-    margin-bottom: 120px;
-    margin-right: calc(50% + 20px);
+  @media only screen and (max-width: ${size.md}) {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
   }
 `;
 
 export const Center_Line = styled.div`
-  @media only screen and (min-width: ${size.lg}) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 2px;
-    height: 100%;
-    background-color: ${colors.gray_95};
+  width: 2px;
+  height: 480px;
+  background-color: ${colors.gray_95};
+  @media only screen and (max-width: ${size.xxl}) {
+    display: none;
   }
 `;
 
 export const Images = styled.div`
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 370px;
   max-width: 720px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   & img {
-    margin: 5px;
+    margin: 0.3125rem;
     width: 170px;
     height: 170px;
     object-fit: cover;
   }
-  @media only screen and (min-width: ${size.lg}) {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: calc(50% + 40px);
-    height: fit-content;
+  @media only screen and (max-width: 556px) {
+    justify-content: center;
+  }
+  @media only screen and (max-width: 400px) {
+    min-width: 320px;
+    justify-content: center;
   }
 `;
 
