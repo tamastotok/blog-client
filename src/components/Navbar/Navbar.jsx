@@ -1,16 +1,6 @@
 import { useRef, useState } from 'react';
-import { NavLink as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import * as S from './Navbar.styles';
-
-function NavLink({ direction, text }) {
-  return (
-    <S.Li>
-      <Link to={direction}>
-        <S.LinkButton>{text}</S.LinkButton>
-      </Link>
-    </S.Li>
-  );
-}
 
 export default function Navbar() {
   const [isClicked, setIsClicked] = useState(false);
@@ -36,13 +26,23 @@ export default function Navbar() {
   return (
     <>
       <S.Nav>
-        <S.Ul ref={navLinksRef} className={isClicked ? 'nav-active' : ''}>
-          <NavLink direction="/" text="Home" />
-          <NavLink direction="/about" text="About" />
-          <NavLink direction="/photos" text="Photos" />
-          <NavLink direction="/blog" text="Blog" />
-          <NavLink direction="/contact" text="Contact" />
-        </S.Ul>
+        <ul ref={navLinksRef} className={isClicked ? 'nav-active' : ''}>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/photos">Photos</Link>
+          </li>
+          <li>
+            <Link to="/blog">Blog</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+        </ul>
       </S.Nav>
 
       <S.BurgerMenu

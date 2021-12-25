@@ -39,60 +39,36 @@ export const Nav = styled.nav`
   border-top: 10px solid ${colors.gray_80};
   padding-top: 20px;
   background-color: ${colors.white};
-`;
-
-export const Ul = styled.ul`
-  position: absolute;
-  z-index: 20;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform: translateX(100%);
-  transition: transform 0.5s ease-in;
-  width: 100%;
-  padding: 20px;
-  background-color: ${colors.white};
-  list-style-type: none;
-  &.nav-active {
-    transform: translateX(0%);
-  }
-  @media only screen and (min-width: ${size.md}) {
-    flex-direction: row;
-    justify-content: center;
-    transform: translateX(0);
-  }
-`;
-
-export const Li = styled.li`
-  margin-left: 20px;
-  margin-right: 20px;
-  & a::after {
-    display: none;
-  }
-`;
-
-export const LinkButton = styled.button`
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: none;
-  padding: 10px;
-  background: none;
-  cursor: pointer;
-  font-size: 1rem;
-  font-family: 'Lato';
-  font-weight: 600;
-  text-align: center;
-  text-transform: uppercase;
-  color: ${colors.gray_80};
-  &:hover {
-    color: ${colors.black};
-  }
-  @media only screen and (min-width: ${size.md}) {
-    margin: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+  & ul {
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    width: 100%;
+    padding: 20px;
+    background-color: ${colors.white};
+    list-style-type: none;
+    &.nav-active {
+      transform: translateX(0%);
+    }
+    @media only screen and (min-width: ${size.md}) {
+      flex-direction: row;
+      justify-content: center;
+      transform: translateX(0);
+    }
+    & li {
+      margin-left: 20px;
+      margin-right: 20px;
+      & a {
+        font-style: normal;
+      }
+      & a::after {
+        display: none;
+      }
+    }
   }
 `;
