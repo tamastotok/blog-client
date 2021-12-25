@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Post = styled.article`
   display: flex;
@@ -10,6 +10,12 @@ export const Post = styled.article`
     position: absolute;
     top: 20px;
     right: 20px;
+    text-transform: uppercase;
+    color: black;
+  }
+  & .back-button:hover {
+    color: rgb(26, 13, 171);
+    border-bottom: 1px solid rgb(26, 13, 171);
   }
   & h1 {
     margin-top: 40px;

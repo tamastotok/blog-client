@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import sanityClient from '../../client.js';
-import BlockContent from '@sanity/block-content-to-react';
+import Content from '@sanity/block-content-to-react';
 import * as S from './SinglePost.styles';
 
 export default function SinglePost() {
@@ -43,11 +43,7 @@ export default function SinglePost() {
       <br />
 
       <div>
-        <BlockContent
-          blocks={post.body}
-          projectId="1r0x1pwf"
-          dataset="production"
-        />
+        <Content blocks={post.body} projectId="1r0x1pwf" dataset="production" />
       </div>
 
       <p className="author">{post.name}</p>

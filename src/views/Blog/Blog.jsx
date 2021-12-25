@@ -5,10 +5,7 @@ import * as S from './Blog.styles';
 export default function Blog({ data }) {
   return (
     <>
-      {/* -------------- */}
-      {/* --- Header --- */}
-      {/* -------------- */}
-      <S.BlogSection>
+      <S.Blog_Text_Section>
         <img
           src={album.woman_in_sunglasses.src}
           alt={album.woman_in_sunglasses.alt}
@@ -23,30 +20,23 @@ export default function Blog({ data }) {
             mollitia placeat perspiciatis quo!
           </p>
         </div>
-      </S.BlogSection>
-      {/* -------------- */}
+      </S.Blog_Text_Section>
 
-      {/* --------------*/}
-      {/* --- Posts --- */}
-      {/* --------------*/}
-      <S.BlogContent>
-        <div>
-          {data &&
-            data.map((post) => {
-              return (
-                <Link to={`/blog/${post.slug.current}`} key={post.slug.current}>
-                  <img
-                    src={post.mainImage.asset.url}
-                    style={{ objectFit: 'cover' }}
-                    alt={post.slug.current}
-                  />
-                  {post.title}
-                </Link>
-              );
-            })}
-        </div>
-      </S.BlogContent>
-      {/* --------------*/}
+      <S.Blog_Posts>
+        {data &&
+          data.map((post) => {
+            return (
+              <Link to={`/blog/${post.slug.current}`} key={post.slug.current}>
+                <img
+                  src={post.mainImage.asset.url}
+                  style={{ objectFit: 'cover' }}
+                  alt={post.slug.current}
+                />
+                {post.title}
+              </Link>
+            );
+          })}
+      </S.Blog_Posts>
     </>
   );
 }

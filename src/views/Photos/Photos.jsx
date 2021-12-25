@@ -79,10 +79,7 @@ export default function Photos() {
 
   return (
     <>
-      {/* --------------------- */}
-      {/* --- Photo section --- */}
-      {/* --------------------- */}
-      <S.PhotoSection>
+      <S.Photo_Section>
         <h2>"Everything I do is a matter of heart, body and soul"</h2>
         <img src={album.watch.src} alt={album.watch.alt} />
         <div>
@@ -94,29 +91,21 @@ export default function Photos() {
         <Link to="/photos#gallery" onClick={(e) => scrollTo(e, galleryRef)}>
           Open gallery
         </Link>
-      </S.PhotoSection>
-      {/* --------------------- */}
+      </S.Photo_Section>
 
-      {/* --------------- */}
-      {/* --- Gallery --- */}
-      {/* --------------- */}
-      <S.GalleryMain>
+      <S.Gallery>
         <h2 ref={galleryRef}>Gallery</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium,
           expedita.
         </p>
 
-        {/* --- Wrapper for buttons and the image container --- */}
-        <S.GallerySliderDiv>
-          <S.PrevButton onClick={prevButtonClick} ref={styledPrevButtonRef}>
+        <S.Wrapper>
+          <S.Left_Arrow onClick={prevButtonClick} ref={styledPrevButtonRef}>
             <div />
             <div />
-          </S.PrevButton>
+          </S.Left_Arrow>
 
-          {/* ----------------------- */}
-          {/* --- Image Container --- */}
-          {/* ----------------------- */}
           <S.Carausel
             className="images"
             ref={carouselSlideRef}
@@ -142,14 +131,13 @@ export default function Photos() {
             />
             <img src={album.pen.src} alt={album.pen.alt} />
           </S.Carausel>
-          {/* ----------------------- */}
 
-          <S.NextButton onClick={nextButtonClick} ref={styledNextButtonRef}>
+          <S.Right_Arrow onClick={nextButtonClick} ref={styledNextButtonRef}>
             <div />
             <div />
-          </S.NextButton>
+          </S.Right_Arrow>
 
-          <S.GalleryButtons>
+          <S.Button_Group>
             <button onClick={prevButtonClick} ref={prevButtonRef}>
               prev
             </button>{' '}
@@ -157,11 +145,9 @@ export default function Photos() {
             <button onClick={nextButtonClick} ref={nextButtonRef}>
               next
             </button>
-          </S.GalleryButtons>
-        </S.GallerySliderDiv>
-        {/* --------------------------------------------------- */}
-      </S.GalleryMain>
-      {/* --------------- */}
+          </S.Button_Group>
+        </S.Wrapper>
+      </S.Gallery>
     </>
   );
 }

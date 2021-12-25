@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors, size } from '../../styles/global';
 
-export const Container = styled.div`
+export const Footer = styled.div`
   position: relative;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -25,7 +25,7 @@ export const TextContent = styled.div`
   }
 `;
 
-export const Center = styled.div`
+export const Center_Line = styled.div`
   @media only screen and (min-width: ${size.lg}) {
     position: absolute;
     top: 0;

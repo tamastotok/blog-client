@@ -62,6 +62,7 @@ export const Form = styled.form`
     border-radius: 5px;
     width: 100%;
     height: 30px;
+    padding: 5px;
     background-color: $white2;
     outline: none;
     font-size: 1rem;
@@ -75,6 +76,7 @@ export const Form = styled.form`
   & textarea {
     width: 100%;
     height: 280px;
+    padding: 5px;
     resize: none;
     border: 2px solid ${colors.gray_80};
     border-radius: 5px;

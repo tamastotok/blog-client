@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { colors, size } from "../../styles/global";
+import styled from 'styled-components';
+import { colors, size } from '../../styles/global';
 
-export const BlogSection = styled.section`
+export const Blog_Text_Section = styled.section`
   padding-top: 40px;
   padding-bottom: 80px;
   & img {
@@ -21,7 +21,7 @@ export const BlogSection = styled.section`
     height: fit-content;
   }
   & div::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -10px;
     left: 10px;
@@ -33,7 +33,7 @@ export const BlogSection = styled.section`
   @media screen and (min-width: ${size.md}) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "img text";
+    grid-template-areas: 'img text';
     place-content: center;
     & img {
       grid-area: img;
@@ -50,19 +50,16 @@ export const BlogSection = styled.section`
   }
 `;
 
-export const BlogContent = styled.main`
+export const Blog_Posts = styled.div`
   padding-top: 40px;
   padding-bottom: 80px;
   background-color: ${colors.gray_95};
-  & div {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 350px);
-    place-items: center;
-    place-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1400px;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  place-items: center;
+  place-content: center;
+  margin-left: auto;
+  margin-right: auto;
   & a {
     display: flex;
     flex-direction: column;

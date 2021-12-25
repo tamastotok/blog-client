@@ -9,10 +9,7 @@ export default function About() {
 
   return (
     <>
-      {/* --------------------- */}
-      {/* --- Intro section --- */}
-      {/* --------------------- */}
-      <S.AboutSection>
+      <S.About_Me_Section>
         <div>
           <h2>Hello my name is Lily</h2>
           <p>
@@ -25,20 +22,18 @@ export default function About() {
             Read more
           </Link>
         </div>
-        <img src={album.blonde.src} alt={album.blonde.alt} />
-      </S.AboutSection>
-      {/* --------------------- */}
 
-      {/* --------------------------- */}
-      {/* --- Extended about main --- */}
-      {/* --------------------------- */}
-      <S.AboutMain>
+        <img src={album.blonde.src} alt={album.blonde.alt} />
+      </S.About_Me_Section>
+
+      <S.About_Me_Main>
         <h2 ref={quoteRef}>
           "Sometimes the simplest things are the most profound"
         </h2>
 
         <img src={album.street.src} alt={album.street.alt} />
-        <S.AboutTextContainer>
+
+        <S.Text_Div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dicta
             iste quam illum consequatur veritatis voluptatum excepturi alias,
@@ -53,29 +48,29 @@ export default function About() {
             tenetur autem minus rerum vel animi dolorem consequatur!
           </p>
           <Link to="/contact">Let's connect</Link>
-        </S.AboutTextContainer>
-      </S.AboutMain>
-      {/* --------------------------- */}
+        </S.Text_Div>
+      </S.About_Me_Main>
 
-      {/* ------------------------- */}
-      {/* --- Fun facts section --- */}
-      {/* ------------------------- */}
-      <S.FunFacts>
+      <S.Fun_Facts_Section>
         <h2>Fun facts</h2>
+
         <div>
           <h4>Favorite food</h4>
           <p>You can wake me up for pizza</p>
         </div>
+
         <div>
           <h4>Secret talent</h4>
           <p>I play guitar and I can sing</p>
         </div>
+
         <div>
           <h4>Vacation</h4>
           <p>I love the little streets in Italy</p>
         </div>
+
         <h1>next</h1>
-      </S.FunFacts>
+      </S.Fun_Facts_Section>
       {/* ------------------------- */}
     </>
   );

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors, size } from '../../styles/global';
 
-export const PhotoSection = styled.section`
+export const Photo_Section = styled.section`
   & h2 {
     margin-left: auto;
     margin-right: auto;
@@ -89,7 +89,7 @@ export const PhotoSection = styled.section`
   }
 `;
 
-export const GalleryMain = styled.main`
+export const Gallery = styled.div`
   padding-top: 40px;
   padding-bottom: 80px;
   background-color: ${colors.gray_95};
@@ -107,7 +107,7 @@ export const GalleryMain = styled.main`
   }
 `;
 
-export const GallerySliderDiv = styled.div`
+export const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
   margin-left: auto;
@@ -142,7 +142,7 @@ export const Carausel = styled.div`
   }
 `;
 
-export const PrevButton = styled.div`
+export const Left_Arrow = styled.div`
   &:hover {
     opacity: 0.5;
     background-color: ${colors.gray_50};
@@ -183,7 +183,7 @@ export const PrevButton = styled.div`
   }
 `;
 
-export const NextButton = styled.div`
+export const Right_Arrow = styled.div`
   &:hover {
     opacity: 0.5;
     background-color: ${colors.gray_50};
@@ -223,7 +223,7 @@ export const NextButton = styled.div`
   }
 `;
 
-export const GalleryButtons = styled.div`
+export const Button_Group = styled.div`
   margin-top: 20px;
   margin-left: auto;
   margin-right: 20px;

@@ -6,7 +6,7 @@ import * as S from './Footer.styles';
 export default function Footer() {
   return (
     <section>
-      <S.Container>
+      <S.Footer>
         <S.TextContent>
           <h1>the list</h1>
           <h2>Don't miss a thing</h2>
@@ -18,7 +18,7 @@ export default function Footer() {
           <Link to="/contact">Sign me up!</Link>
         </S.TextContent>
 
-        <S.Center />
+        <S.Center_Line />
 
         <S.Images>
           <img
@@ -29,7 +29,7 @@ export default function Footer() {
           <img src={album.woman_portrait.src} alt={album.woman_portrait.alt} />
           <img src={album.pen.src} alt={album.pen.alt} />
         </S.Images>
-      </S.Container>
+      </S.Footer>
 
       <S.Bottom />
     </section>

@@ -3,7 +3,6 @@ import { Switch, BrowserRouter } from 'react-router-dom';
 import sanityClient from './client.js';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import CustomRoute from './components/CustomRoute/CustomRoute';
-
 import Home from './views/Home/Home';
 import About from './views/About/About';
 import Photos from './views/Photos/Photos';

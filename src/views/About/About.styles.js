@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors, size } from '../../styles/global';
 
-export const AboutSection = styled.section`
+export const About_Me_Section = styled.section`
   display: flex;
   flex-direction: column-reverse;
   & div {
@@ -40,7 +40,7 @@ export const AboutSection = styled.section`
   }
 `;
 
-export const AboutMain = styled.main`
+export const About_Me_Main = styled.main`
   & h2 {
     margin-left: auto;
     margin-right: auto;
@@ -74,7 +74,7 @@ export const AboutMain = styled.main`
   }
 `;
 
-export const AboutTextContainer = styled.div`
+export const Text_Div = styled.div`
   margin-top: 20px;
   margin-bottom: 80px;
   padding-left: 10px;
@@ -88,7 +88,7 @@ export const AboutTextContainer = styled.div`
   }
 `;
 
-export const FunFacts = styled.section`
+export const Fun_Facts_Section = styled.section`
   position: relative;
   z-index: 10;
   display: flex;
