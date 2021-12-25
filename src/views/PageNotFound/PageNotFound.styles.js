@@ -10,7 +10,10 @@ export const Message = styled.div`
   width: 100%;
   height: fit-content;
   & h1 {
-    margin: 80px 0;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 0;
+    margin-right: 0;
     font-size: calc(1rem + 8vmax);
     font-weight: 400;
   }

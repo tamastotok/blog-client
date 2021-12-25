@@ -27,7 +27,7 @@ export const Welcome_Section = styled.section`
     }
     & img:nth-child(2) {
       position: absolute;
-      top: 80px;
+      top: 5rem;
       left: 0;
       right: 0;
       margin: auto;
@@ -36,34 +36,34 @@ export const Welcome_Section = styled.section`
 `;
 
 export const Welcome_Text_Content = styled.div`
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 340px;
   height: fit-content;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
   @media screen and (min-width: ${size.lg}) {
     position: absolute;
-    top: 323px;
-    left: calc(50% + 180px);
+    top: 20rem;
+    left: calc(50% + 11.25rem);
     margin: 0;
     padding: 0;
   }
 `;
 
 export const Main_Wrapper = styled.main`
-  padding-top: 40px;
-  padding-bottom: 80px;
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
   @media screen and (min-width: ${size.lg}) {
     position: relative;
   }
 `;
 
 export const About_Section = styled.section`
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
   margin-left: auto;
   margin-right: auto;
   & img {
@@ -76,36 +76,39 @@ export const About_Section = styled.section`
   @media screen and (min-width: ${size.lg}) {
     position: relative;
     margin-top: 0;
-    margin-bottom: 80px;
+    margin-bottom: 5rem;
     margin-left: 0;
     margin-right: 0;
     height: 450px;
     & img {
       position: absolute;
-      left: calc(50% - 2px);
+      left: calc(50% - 0.125rem);
     }
   }
 `;
 
 export const About_Text = styled.div`
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 340px;
-  padding: 0 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
   @media screen and (min-width: ${size.lg}) {
     position: absolute;
     top: 0;
-    right: calc(50% + 22px);
+    right: calc(50% + 1.375rem);
     margin: 0;
     padding: 0;
   }
 `;
 
 export const Photos_Section = styled.section`
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
   margin-left: auto;
   margin-right: auto;
   & div:first-child {
@@ -134,7 +137,7 @@ export const Photos_Section = styled.section`
       content: '';
       position: absolute;
       right: 0;
-      top: -80px;
+      top: -5rem;
       width: 2px;
       height: 80px;
       background-color: ${colors.gray_95};
@@ -143,7 +146,7 @@ export const Photos_Section = styled.section`
       content: '';
       position: absolute;
       right: 0;
-      bottom: -100px;
+      bottom: -6.25rem;
       width: 2px;
       height: 100px;
       background-color: ${colors.gray_95};
@@ -152,33 +155,33 @@ export const Photos_Section = styled.section`
 `;
 
 export const Photos_Text = styled.div`
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 340px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
   @media screen and (min-width: ${size.lg}) {
     position: absolute;
-    bottom: 110px;
-    left: calc(50% + 20px);
+    bottom: 6.875rem;
+    left: calc(50% + 1.25rem);
     margin: 0;
     padding: 0;
   }
 `;
 
 export const Blog_Section = styled.section`
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
   background-color: ${colors.gray_95};
 `;
 
 export const Blog_Header = styled.div`
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
@@ -189,7 +192,7 @@ export const Blog_Header = styled.div`
     display: flex;
     align-items: baseline;
     & h2 {
-      margin-right: 10px;
+      margin-right: 0.625rem;
     }
   }
 `;
@@ -199,8 +202,8 @@ export const Blog_Wrapper = styled.div`
     display: flex;
     justify-content: center;
     & div {
-      margin-left: 45px;
-      margin-right: 45px;
+      margin-left: 3rem;
+      margin-right: 3rem;
     }
   }
 `;
@@ -209,9 +212,9 @@ export const Blog_Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   & img {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     width: 100%;
     min-width: 280px;
     max-width: 400px;

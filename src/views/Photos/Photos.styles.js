@@ -12,7 +12,7 @@ export const Photo_Section = styled.section`
   }
   & div {
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -35,12 +35,12 @@ export const Photo_Section = styled.section`
       'watch sunglasses'
       'link sunglasses';
     place-content: center;
-    padding-top: 40px;
-    padding-bottom: 80px;
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
     & h2 {
       grid-area: title;
       margin-left: auto;
-      margin-right: 40px;
+      margin-right: 2.5rem;
       width: 100%;
       max-width: 400px;
       text-align: center;
@@ -50,9 +50,9 @@ export const Photo_Section = styled.section`
       grid-area: watch;
       justify-self: end;
       margin-top: 0;
-      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
       margin-left: auto;
-      margin-right: 40px;
+      margin-right: 2.5rem;
       width: 100%;
       max-width: 400px;
       height: 100%;
@@ -72,7 +72,7 @@ export const Photo_Section = styled.section`
     & div::after {
       content: '';
       position: absolute;
-      bottom: -80px;
+      bottom: -5rem;
       left: 0;
       width: 2px;
       height: 80px;
@@ -82,16 +82,16 @@ export const Photo_Section = styled.section`
       grid-area: link;
       display: block;
       margin-top: auto;
-      margin-bottom: 10px;
+      margin-bottom: 0.625rem;
       margin-left: auto;
-      margin-right: 40px;
+      margin-right: 2.5rem;
     }
   }
 `;
 
 export const Gallery = styled.div`
-  padding-top: 40px;
-  padding-bottom: 80px;
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
   background-color: ${colors.gray_95};
   & h2 {
     margin-left: auto;
@@ -99,11 +99,11 @@ export const Gallery = styled.div`
     text-align: center;
   }
   & p {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 `;
 
@@ -125,8 +125,8 @@ export const Carausel = styled.div`
   display: flex;
   height: 520px;
   & img {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     width: 310px;
     object-fit: cover;
   }
@@ -164,7 +164,7 @@ export const Left_Arrow = styled.div`
   cursor: pointer;
   & div {
     position: absolute;
-    left: 10px;
+    left: 0.625rem;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
@@ -204,8 +204,8 @@ export const Right_Arrow = styled.div`
   background-color: none;
   & div {
     position: absolute;
-    right: 10px;
-    margin-left: 10px;
+    right: 0.625rem;
+    margin-left: 0.625rem;
     margin-right: auto;
     width: 80%;
     height: 4px;
@@ -224,9 +224,9 @@ export const Right_Arrow = styled.div`
 `;
 
 export const Button_Group = styled.div`
-  margin-top: 20px;
+  margin-top: 1.25rem;
   margin-left: auto;
-  margin-right: 20px;
+  margin-right: 1.25rem;
   width: fit-content;
   & button {
     border: 0;

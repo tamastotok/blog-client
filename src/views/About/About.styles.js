@@ -5,14 +5,14 @@ export const About_Me_Section = styled.section`
   display: flex;
   flex-direction: column-reverse;
   & div {
-    margin-top: 40px;
-    margin-bottom: 80px;
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 400px;
     height: fit-content;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
   }
   & img {
     max-height: 650px;
@@ -22,18 +22,18 @@ export const About_Me_Section = styled.section`
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
-    padding-bottom: 80px;
+    padding-bottom: 5rem;
     & div {
       margin-top: auto;
       margin-bottom: auto;
       margin-right: 0;
       width: 100%;
       max-width: 440px;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
     }
     & img {
-      margin-left: 20px;
+      margin-left: 1.25rem;
       margin-right: auto;
       width: 400px;
     }
@@ -44,8 +44,8 @@ export const About_Me_Main = styled.main`
   & h2 {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
     text-align: center;
   }
   & img {
@@ -59,11 +59,11 @@ export const About_Me_Main = styled.main`
     grid-template-areas:
       'title title'
       'img content';
-    padding-top: 40px;
-    padding-bottom: 80px;
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
     & h2 {
       grid-area: title;
-      margin-bottom: 40px;
+      margin-bottom: 2.5rem;
     }
     & img {
       grid-area: img;
@@ -75,16 +75,16 @@ export const About_Me_Main = styled.main`
 `;
 
 export const Text_Div = styled.div`
-  margin-top: 20px;
-  margin-bottom: 80px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-top: 1.25rem;
+  margin-bottom: 5rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
   @media screen and (min-width: ${size.md}) {
     grid-area: content;
     margin: 0;
     width: 100%;
     max-width: 420px;
-    padding-left: 40px;
+    padding-left: 2.5rem;
   }
 `;
 
@@ -94,25 +94,25 @@ export const Fun_Facts_Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
   background-color: ${colors.gray_95};
   & h2 {
-    margin-bottom: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-bottom: 2.5rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
   }
   & div {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     width: 280px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
   }
   & h1 {
     position: absolute;
     z-index: -20;
     bottom: 0;
-    left: calc(50% + 200px);
+    left: calc(50% + 12.5rem);
     width: fit-content;
     height: 200px;
     color: ${colors.white};
@@ -121,7 +121,7 @@ export const Fun_Facts_Section = styled.section`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 80px;
+    padding-bottom: 5rem;
     & h2 {
       width: 100%;
       text-align: center;

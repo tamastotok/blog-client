@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { size } from '../../styles/global';
 
 export const Header = styled.h1`
-  margin-top: 40px;
-  margin-bottom: 60px;
+  margin-top: 2.5rem;
+  margin-bottom: 3.75rem;
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
@@ -11,8 +11,8 @@ export const Header = styled.h1`
   font-family: 'Silhouetto';
   font-weight: 400;
   @media screen and (min-width: ${size.md}) {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
     margin-left: auto;
     margin-right: auto;
   }

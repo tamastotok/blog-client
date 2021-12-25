@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import { colors, size } from '../../styles/global';
 
 export const Blog_Text_Section = styled.section`
-  padding-top: 40px;
-  padding-bottom: 80px;
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
   & img {
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
     margin-left: auto;
     margin-right: auto;
     width: 250px;
@@ -15,16 +15,16 @@ export const Blog_Text_Section = styled.section`
   }
   & div {
     position: relative;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
     max-width: 750px;
     height: fit-content;
   }
   & div::after {
     content: '';
     position: absolute;
-    bottom: -10px;
-    left: 10px;
+    bottom: -0.625rem;
+    left: 0.625rem;
     width: calc(100% - 20px);
     height: 2px;
     background-color: ${colors.gray_95};
@@ -43,16 +43,16 @@ export const Blog_Text_Section = styled.section`
     }
     & div {
       grid-area: text;
-      margin-left: 10px;
+      margin-left: 0.625rem;
       margin-right: 0;
-      padding-right: 10px;
+      padding-right: 0.625rem;
     }
   }
 `;
 
 export const Blog_Posts = styled.div`
-  padding-top: 40px;
-  padding-bottom: 80px;
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
   background-color: ${colors.gray_95};
   display: grid;
   grid-template-columns: repeat(auto-fit, 350px);
@@ -64,11 +64,11 @@ export const Blog_Posts = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 5px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    padding: 0.3125rem;
   }
   & a:hover {
     outline: 1px solid ${colors.black};
@@ -78,7 +78,7 @@ export const Blog_Posts = styled.div`
     display: none;
   }
   & img {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     width: 300px;
     height: 200px;
     object-fit: cover;

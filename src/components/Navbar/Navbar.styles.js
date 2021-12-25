@@ -5,14 +5,14 @@ import styled from 'styled-components';
 export const BurgerMenu = styled.div`
   position: absolute;
   z-index: 40;
-  top: 41px;
-  right: 15px;
-  padding: 5px;
+  top: 2.5rem;
+  right: 1rem;
+  padding: 0.375rem;
   cursor: pointer;
   & div {
     transition: all 0.3s ease;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
     width: 24px;
     height: 4px;
     background-color: ${colors.gray_80};
@@ -37,7 +37,7 @@ export const BurgerMenu = styled.div`
 export const Nav = styled.nav`
   top: 0;
   border-top: 10px solid ${colors.gray_80};
-  padding-top: 20px;
+  padding-top: 1.25rem;
   background-color: ${colors.white};
   & ul {
     position: absolute;
@@ -49,7 +49,7 @@ export const Nav = styled.nav`
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
     width: 100%;
-    padding: 20px;
+    padding: 1.25rem;
     background-color: ${colors.white};
     list-style-type: none;
     &.nav-active {
@@ -61,8 +61,8 @@ export const Nav = styled.nav`
       transform: translateX(0);
     }
     & li {
-      margin-left: 20px;
-      margin-right: 20px;
+      margin-left: 1.25rem;
+      margin-right: 1.25rem;
       & a {
         font-style: normal;
       }
