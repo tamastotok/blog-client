@@ -20,15 +20,15 @@ export const TextContent = styled.div`
   min-width: 320px;
   max-width: 720px;
   width: 100%;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 10rem;
   & h1 {
     margin-bottom: -5rem;
     color: ${colors.gray_50};
   }
   @media only screen and (max-width: ${size.md}) {
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
+    max-width: 450px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 `;
 
@@ -55,6 +55,11 @@ export const Images = styled.div`
     height: 170px;
     object-fit: cover;
   }
+  @media only screen and (max-width: 736px) {
+    max-width: 320px;
+    justify-content: center;
+  }
+
   @media only screen and (max-width: 556px) {
     justify-content: center;
   }
