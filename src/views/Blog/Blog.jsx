@@ -10,7 +10,7 @@ export default function Blog({ data }) {
           src={album.woman_in_sunglasses.src}
           alt={album.woman_in_sunglasses.alt}
         />
-        <div className="text">
+        <div>
           <h2>The blog</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,

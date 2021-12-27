@@ -1,52 +1,37 @@
 import styled from 'styled-components';
-import { colors, size } from '../../styles/global';
+import { colors } from '../../styles/global';
 
 export const Blog_Text_Section = styled.section`
   padding-top: 2.5rem;
   padding-bottom: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   & img {
-    display: block;
-    margin-bottom: 2.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    width: 250px;
-    height: 250px;
+    margin-bottom: 2rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
   }
   & div {
     position: relative;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    max-width: 350px;
+    height: fit-content;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
-    max-width: 750px;
-    height: fit-content;
   }
   & div::after {
     content: '';
     position: absolute;
-    bottom: -0.625rem;
+    bottom: 0;
     left: 0.625rem;
     width: calc(100% - 20px);
     height: 2px;
     background-color: ${colors.gray_95};
-  }
-
-  @media screen and (min-width: ${size.md}) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'img text';
-    place-content: center;
-    & img {
-      grid-area: img;
-      margin-bottom: 0;
-      margin-left: auto;
-      margin-right: 0;
-    }
-    & div {
-      grid-area: text;
-      margin-left: 0.625rem;
-      margin-right: 0;
-      padding-right: 0.625rem;
-    }
   }
 `;
 
