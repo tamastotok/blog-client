@@ -76,6 +76,8 @@ export const Nav = styled.nav`
       flex-direction: row;
       justify-content: center;
       left: 0;
+      opacity: 1;
+      transform: translatex(0);
       & li {
         margin-bottom: 0;
       }
@@ -84,7 +86,7 @@ export const Nav = styled.nav`
 `;
 
 export const Header = styled.h1`
-  margin-top: 2.5rem;
+  padding-top: 2.5rem;
   margin-bottom: 3.75rem;
   margin-left: auto;
   margin-right: auto;
