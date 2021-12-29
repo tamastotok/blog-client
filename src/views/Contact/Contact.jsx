@@ -74,7 +74,6 @@ export default function Contact() {
           <label htmlFor="name">Name</label>
           <input
             autoComplete="off"
-            autoFocus
             type="text"
             name="name"
             required
