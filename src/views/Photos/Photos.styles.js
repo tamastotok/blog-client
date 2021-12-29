@@ -125,8 +125,8 @@ export const Carausel = styled.div`
   display: flex;
   height: 520px;
   & img {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-left: 5px;
+    margin-right: 5px;
     width: 310px;
     object-fit: cover;
   }
