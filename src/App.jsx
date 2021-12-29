@@ -14,7 +14,7 @@ import Footer from './components/Footer/Footer.jsx';
 
 export default function App() {
   const [data, setData] = useState(null);
-  const [navbarIsClosed, setNavbarIsClosed] = useState(false);
+  const [navbarIsClosed, setNavbarIsClosed] = useState(true);
 
   useEffect(() => {
     sanityClient
