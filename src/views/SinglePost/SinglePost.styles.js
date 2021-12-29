@@ -1,11 +1,14 @@
 import styled from 'styled-components';
+import { colors } from '../../styles/global';
 
 export const Post = styled.article`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+  background-color: ${colors.gray_95};
   & .back-button {
     position: absolute;
     top: 1.25rem;
@@ -19,6 +22,7 @@ export const Post = styled.article`
   }
   & h1 {
     margin-top: 2.5rem;
+    font-family: OldStandardTT;
   }
   & p {
     margin-bottom: 2.5rem;
