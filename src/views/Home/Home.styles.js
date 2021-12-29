@@ -69,6 +69,7 @@ export const About_Section = styled.section`
   & img {
     display: block;
     margin: auto;
+    width: 100%;
     max-width: 380px;
     height: 450px;
     object-fit: cover;

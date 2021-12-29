@@ -3,88 +3,55 @@ import { colors, size } from '../../styles/global';
 
 export const About_Me_Section = styled.section`
   display: flex;
-  flex-direction: column-reverse;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  padding-bottom: 6rem;
   & div {
-    margin-top: 2.5rem;
-    margin-bottom: 5rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
     max-width: 400px;
-    height: fit-content;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
   }
   & img {
+    margin-bottom: 2.5rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    max-width: 400px;
     max-height: 650px;
     object-fit: cover;
   }
-  @media screen and (min-width: ${size.md}) {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-    padding-bottom: 5rem;
-    & div {
-      margin-top: auto;
-      margin-bottom: auto;
-      margin-right: 0;
-      width: 100%;
-      max-width: 440px;
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
-    }
-    & img {
-      margin-left: 1.25rem;
-      margin-right: auto;
-      width: 400px;
-    }
-  }
+`;
+
+export const Quote = styled.h2`
+  margin-bottom: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  text-align: center;
 `;
 
 export const About_Me_Main = styled.main`
-  & h2 {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
-    text-align: center;
-  }
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 6rem;
   & img {
-    max-height: 520px;
+    margin-bottom: 2.5rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    max-width: 400px;
+    height: 500px;
     object-fit: cover;
     filter: grayscale(100);
   }
-  @media screen and (min-width: ${size.md}) {
-    position: relative;
-    display: grid;
-    grid-template-areas:
-      'title title'
-      'img content';
-    padding-top: 2.5rem;
-    padding-bottom: 5rem;
-    & h2 {
-      grid-area: title;
-      margin-bottom: 2.5rem;
-    }
-    & img {
-      grid-area: img;
-      width: 400px;
-      height: 510px;
-      margin-left: auto;
-    }
-  }
-`;
-
-export const Text_Div = styled.div`
-  margin-top: 1.25rem;
-  margin-bottom: 5rem;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-  @media screen and (min-width: ${size.md}) {
-    grid-area: content;
-    margin: 0;
-    width: 100%;
-    max-width: 420px;
-    padding-left: 2.5rem;
+  & div {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    max-width: 400px;
   }
 `;
 
@@ -112,7 +79,7 @@ export const Fun_Facts_Section = styled.section`
     position: absolute;
     z-index: -20;
     bottom: 0;
-    left: calc(50% + 12.5rem);
+    left: 45%;
     width: fit-content;
     height: 200px;
     color: ${colors.white};
@@ -128,6 +95,9 @@ export const Fun_Facts_Section = styled.section`
     }
     & div {
       padding: 0;
+    }
+    & h1 {
+      left: 60%;
     }
   }
 `;

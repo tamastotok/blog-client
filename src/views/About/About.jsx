@@ -26,14 +26,14 @@ export default function About() {
         <img src={album.blonde.src} alt={album.blonde.alt} />
       </S.About_Me_Section>
 
-      <S.About_Me_Main>
-        <h2 ref={quoteRef}>
-          "Sometimes the simplest things are the most profound"
-        </h2>
+      <S.Quote ref={quoteRef}>
+        "Sometimes the simplest things are the most profound"
+      </S.Quote>
 
+      <S.About_Me_Main>
         <img src={album.street.src} alt={album.street.alt} />
 
-        <S.Text_Div>
+        <div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dicta
             iste quam illum consequatur veritatis voluptatum excepturi alias,
@@ -48,7 +48,7 @@ export default function About() {
             tenetur autem minus rerum vel animi dolorem consequatur!
           </p>
           <Link to="/contact">Let's connect</Link>
-        </S.Text_Div>
+        </div>
       </S.About_Me_Main>
 
       <S.Fun_Facts_Section>
@@ -71,7 +71,6 @@ export default function About() {
 
         <h1>next</h1>
       </S.Fun_Facts_Section>
-      {/* ------------------------- */}
     </>
   );
 }

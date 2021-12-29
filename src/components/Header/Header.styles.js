@@ -36,21 +36,20 @@ export const BurgerMenu = styled.div`
 export const Nav = styled.nav`
   border-top: 10px solid ${colors.gray_80};
   background-color: ${colors.white};
-  width: 100%;
-  height: fit-content;
   position: relative;
+  width: 100%;
   & ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     opacity: 0;
     transform: translateX(10%);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     position: absolute;
     z-index: -10;
+    top: 0;
     left: 0;
-    right: 0;
-    margin: auto;
+    width: 90%;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
     background-color: ${colors.white};
@@ -68,6 +67,7 @@ export const Nav = styled.nav`
     }
   }
   & .nav-active {
+    width: 100%;
     z-index: 10;
     opacity: 1;
     transform: translateX(0);
