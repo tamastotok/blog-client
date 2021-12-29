@@ -11,14 +11,14 @@ export const About_Me_Section = styled.section`
     margin-bottom: auto;
     margin-left: 1.25rem;
     margin-right: 1.25rem;
+    width: 100%;
     max-width: 400px;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
   }
   & img {
     margin-bottom: 2.5rem;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
+    width: 100%;
     max-width: 400px;
     max-height: 650px;
     object-fit: cover;
@@ -43,6 +43,7 @@ export const About_Me_Main = styled.main`
     margin-bottom: 2.5rem;
     margin-left: 1.25rem;
     margin-right: 1.25rem;
+    width: 100%;
     max-width: 400px;
     height: 500px;
     object-fit: cover;
@@ -51,6 +52,7 @@ export const About_Me_Main = styled.main`
   & div {
     margin-left: 1.25rem;
     margin-right: 1.25rem;
+    width: 100%;
     max-width: 400px;
   }
 `;
