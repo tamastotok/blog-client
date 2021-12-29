@@ -1,18 +1,15 @@
 import styled from 'styled-components';
-import { colors } from '../../styles/global';
+import { size, colors } from '../../styles/global';
 
 export const Post = styled.article`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /*padding-top: 3rem;
+  padding-bottom: 3rem;
   padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-right: 1.25rem;*/
+  padding: 3rem;
   background-color: ${colors.gray_95};
   & .back-button {
-    position: absolute;
-    top: 1.25rem;
-    right: 1.25rem;
+    float: right;
     text-transform: uppercase;
     color: black;
   }
@@ -21,9 +18,10 @@ export const Post = styled.article`
     border-bottom: 1px solid rgb(26, 13, 171);
   }
   & h1 {
-    margin-top: 2.5rem;
+    width: 100%;
     font-size: 6rem;
     font-family: OldStandardTT;
+    text-align: center;
   }
   & p {
     margin-bottom: 2.5rem;
@@ -52,5 +50,14 @@ export const Post = styled.article`
   }
   & .author {
     margin-left: auto;
+  }
+  @media only screen and (max-width: ${size.md}) {
+    padding-top: 8rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    & h1 {
+      padding-top: 2rem;
+      font-size: 5rem;
+    }
   }
 `;

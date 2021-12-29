@@ -26,7 +26,10 @@ export default function Blog({ data }) {
         {data &&
           data.map((post) => {
             return (
-              <Link to={`/blog/${post.slug.current}`} key={post.slug.current}>
+              <Link
+                to={`/blog/post/${post.slug.current}`}
+                key={post.slug.current}
+              >
                 <img
                   src={post.mainImage.asset.url}
                   style={{ objectFit: 'cover' }}

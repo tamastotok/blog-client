@@ -1,10 +1,11 @@
 import { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import * as S from './Header.styles';
 
 export default function Header({ navbarIsClosed, changeNavbar }) {
   const burgerMenuRef = useRef(!null);
   const navLinksRef = useRef(!null);
+  const { pathname } = useLocation();
 
   const closeNavbar = () => {
     changeNavbar(true);
@@ -72,7 +73,7 @@ export default function Header({ navbarIsClosed, changeNavbar }) {
         <div className="line-3" />
       </S.BurgerMenu>
 
-      <S.Header>Lily</S.Header>
+      {pathname.includes('/blog/post/') ? null : <S.Header>Lily</S.Header>}
     </>
   );
 }

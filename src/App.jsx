@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Switch, BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import sanityClient from './client.js';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Home from './views/Home/Home';
@@ -51,7 +51,7 @@ export default function App() {
           <Route path="/" exact={true} component={Home} />
           <Route path="/about" component={About} />
           <Route path="/photos" component={Photos} />
-          {/*<Route path="/blog/:slug" component={SinglePost} />*/}
+          <Route path="/blog/post/:slug" component={SinglePost} />
           <Route path="/blog">
             <Blog data={data} />
           </Route>
@@ -59,12 +59,6 @@ export default function App() {
           <Route path="*" component={PageNotFound} />
         </Switch>
         <Footer />
-      </div>
-
-      <div className="overlay" onClick={() => changeNavbar(true)}>
-        <Switch>
-          <Route path="/blog/:slug" component={SinglePost} />
-        </Switch>
       </div>
     </BrowserRouter>
   );

@@ -4,7 +4,7 @@ import { colors, size } from '../../styles/global';
 export const BurgerMenu = styled.div`
   position: absolute;
   z-index: 40;
-  top: 2.5rem;
+  top: 1.25rem;
   right: 1rem;
   padding: 0.375rem;
   cursor: pointer;
@@ -34,11 +34,11 @@ export const BurgerMenu = styled.div`
 `;
 
 export const Nav = styled.nav`
-  top: 0;
   border-top: 10px solid ${colors.gray_80};
-  padding-top: 1.25rem;
   background-color: ${colors.white};
   width: 100%;
+  height: fit-content;
+  position: relative;
   & ul {
     display: flex;
     flex-direction: column;
@@ -47,12 +47,12 @@ export const Nav = styled.nav`
     transform: translateX(10%);
     transition: all 0.3s ease;
     position: absolute;
+    z-index: -10;
     left: 0;
     right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    padding: 1.25rem;
+    margin: auto;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
     background-color: ${colors.white};
     list-style-type: none;
     & li {
@@ -68,11 +68,14 @@ export const Nav = styled.nav`
     }
   }
   & .nav-active {
+    z-index: 10;
     opacity: 1;
     transform: translateX(0);
   }
   @media only screen and (min-width: ${size.md}) {
     & ul {
+      position: static;
+      width: 100%;
       flex-direction: row;
       justify-content: center;
       left: 0;
