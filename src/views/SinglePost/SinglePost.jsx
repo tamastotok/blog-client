@@ -12,41 +12,43 @@ export default function SinglePost() {
     sanityClient
       .fetch(
         `*[slug.current == "${slug}"]{
-         title,
-         _id,
-         slug,
-         mainImage{
+          title,
+          _id,
+          slug,
+          mainImage{
             asset->{
-               _id,
-               url
+              _id,
+              url
             }
-         },
-         body,
-         "name": author->name,
-         "authorImage": author->image
-      }`
+          },
+          body,
+          "name": author->name,
+          "authorImage": author->image
+        }`
       )
       .then((res) => setPost(res[0]))
       .catch((err) => console.error(err));
   }, [slug]);
-
-  if (!post) return <h1>Loading...</h1>;
 
   return (
     <S.Post>
       <Link className="back-button" to="/blog">
         back
       </Link>
-      <h1>{post.title}</h1>
+      <h1>{post && post.title}</h1>
 
       <br />
       <br />
 
       <div>
-        <Content blocks={post.body} projectId="1r0x1pwf" dataset="production" />
+        <Content
+          blocks={post && post.body}
+          projectId="1r0x1pwf"
+          dataset="production"
+        />
       </div>
 
-      <p className="author">{post.name}</p>
+      <p className="author">{post && post.name}</p>
     </S.Post>
   );
 }
