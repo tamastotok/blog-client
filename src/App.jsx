@@ -51,15 +51,21 @@ export default function App() {
           <Route path="/" exact={true} component={Home} />
           <Route path="/about" component={About} />
           <Route path="/photos" component={Photos} />
-          <Route path="/blog/:slug" component={SinglePost} />
+          {/*<Route path="/blog/:slug" component={SinglePost} />*/}
           <Route path="/blog">
             <Blog data={data} />
           </Route>
           <Route path="/contact" component={Contact} />
           <Route path="*" component={PageNotFound} />
         </Switch>
+        <Footer />
       </div>
-      <Footer />
+
+      <div className="overlay" onClick={() => changeNavbar(true)}>
+        <Switch>
+          <Route path="/blog/:slug" component={SinglePost} />
+        </Switch>
+      </div>
     </BrowserRouter>
   );
 }

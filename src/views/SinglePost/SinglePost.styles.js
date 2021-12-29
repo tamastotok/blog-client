@@ -22,6 +22,7 @@ export const Post = styled.article`
   }
   & h1 {
     margin-top: 2.5rem;
+    font-size: 6rem;
     font-family: OldStandardTT;
   }
   & p {
