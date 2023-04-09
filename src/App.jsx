@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import axios from 'axios';
 import sanityClient from './client.js';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Home from './views/Home/Home';
@@ -15,6 +16,33 @@ import Footer from './components/Footer/Footer.jsx';
 export default function App() {
   const [data, setData] = useState(null);
   const [navbarIsClosed, setNavbarIsClosed] = useState(true);
+  const [serverMessage, setServerMessage] = useState('');
+  const [serverIsOffline, setServerIsOffline] = useState(false);
+
+  const PROXY = process.env.REACT_APP_PROXY;
+
+  // Check if contact server is online
+  useEffect(() => {
+    const interval = setInterval(async () => {
+      try {
+        const { data } = await axios.get(`${PROXY}/status`);
+        if (data) {
+          setServerMessage('');
+          setServerIsOffline(false);
+        } else {
+          setServerMessage('Contact is unavailable!');
+          setServerIsOffline(true);
+        }
+      } catch (error) {
+        setServerMessage('Contact is unavailable!');
+        setServerIsOffline(true);
+      }
+    }, 5000);
+
+    return () => clearInterval(interval);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     sanityClient
@@ -44,22 +72,30 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <ScrollToTop />
-      <Header navbarIsClosed={navbarIsClosed} changeNavbar={changeNavbar} />
-      <div className="overlay" onClick={() => changeNavbar(true)}>
-        <Switch>
-          <Route path="/" exact={true} component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/photos" component={Photos} />
-          <Route path="/blog/post/:slug" component={SinglePost} />
-          <Route path="/blog">
-            <Blog data={data} />
-          </Route>
-          <Route path="/contact" component={Contact} />
-          <Route path="*" component={PageNotFound} />
-        </Switch>
-        <Footer />
-      </div>
+      <>
+        <ScrollToTop />
+        <Header navbarIsClosed={navbarIsClosed} changeNavbar={changeNavbar} />
+        <div className="overlay" onClick={() => changeNavbar(true)}>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/photos" element={<Photos />} />
+            <Route path="/blog/post/:slug" element={<SinglePost />} />
+            <Route path="/blog" element={<Blog data={data} />} />
+            <Route
+              path="/contact"
+              element={
+                <Contact
+                  serverMessage={serverMessage}
+                  serverIsOffline={serverIsOffline}
+                />
+              }
+            />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+          <Footer />
+        </div>
+      </>
     </BrowserRouter>
   );
 }

@@ -1,8 +1,10 @@
-import sanityClient from "@sanity/client";
+import { createClient } from '@sanity/client';
 
-export default sanityClient({
-  projectId: process.env.REACT_APP_SC_PROJECT_ID,
-  dataset: process.env.REACT_APP_SC_DATASET,
+const sanityClient = createClient({
+  projectId: '1r0x1pwf',
+  dataset: 'production',
   useCdn: true,
-  apiVersion: "2021-08-22",
+  apiVersion: '2021-08-22',
 });
+
+export default sanityClient;

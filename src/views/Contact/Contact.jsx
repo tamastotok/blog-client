@@ -1,40 +1,15 @@
-import { useRef, useEffect, useState } from 'react';
-import { useLocation } from 'react-router';
+import { useRef } from 'react';
 import axios from 'axios';
 import { album } from '../../utils/constants/images';
 import * as S from './Contact.styles';
 
-export default function Contact() {
-  const location = useLocation();
+export default function Contact({ serverMessage, serverIsOffline }) {
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const subjectRef = useRef(null);
   const messageRef = useRef(null);
-  const [serverStatus, setServerStatus] = useState('');
-  const [serverIsOffline, setServerIsOffline] = useState(false);
 
   const PROXY = process.env.REACT_APP_PROXY;
-
-  // Check contact server status
-  useEffect(() => {
-    const connectToSubmit = async () => {
-      try {
-        const { data } = await axios.get(`${PROXY}/status`);
-        if (data) {
-          setServerStatus('');
-          setServerIsOffline(false);
-        }
-      } catch (error) {
-        setServerStatus('Contact is unavailable!');
-        setServerIsOffline(true);
-      }
-    };
-
-    if (location.pathname === '/contact') {
-      connectToSubmit();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -59,7 +34,7 @@ export default function Contact() {
       <img src={album.pen.src} alt={album.pen.alt} />
       <S.Text>
         {serverIsOffline ? (
-          <h2 style={{ color: 'crimson' }}>{serverStatus}</h2>
+          <h2 style={{ color: 'crimson' }}>{serverMessage}</h2>
         ) : (
           <h2>Contact</h2>
         )}
